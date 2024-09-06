@@ -8,6 +8,7 @@
     - https://violentmonkey.github.io/api/gm/#gm_setclipboard
   - https://violentmonkey.github.io/api/matching/
   - https://violentmonkey.github.io/posts/features-in-userscript-generator/
+  - [[Feature] Manifest V3 for Chrome](https://github.com/violentmonkey/violentmonkey/issues/1934) issue
 - https://github.com/chocolateboy/userscripts:
   - https://github.com/chocolateboy/userscripts/blob/b0d3ec392b14cef34c5c9687a4753eaa4cd0213a/src/more-tomatoes.user.ts
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event

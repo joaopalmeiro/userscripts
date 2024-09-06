@@ -1,17 +1,15 @@
 // ==UserScript==
-// @name      pypi-copy
-// @namespace Violentmonkey Scripts
-// @match     https://pypi.org/project/*
-// @version   0.1.0
-// @author    João Palmeiro
-// @run-at    document-end
+// @name        pypiCopy
+// @description Copy the package name and version as a requirement to the clipboard.
+// @namespace   Violentmonkey Scripts
+// @match       https://pypi.org/project/*
+// @version     0.1.0
+// @author      João Palmeiro
+// @run-at      document-end
 // ==/UserScript==
 
 const packageTitle = document.querySelector("h1");
-const packageRequirement = packageTitle.textContent
-  .trim()
-  .split(" ")
-  .join("==");
+const packageRequirement = packageTitle.textContent.trim().split(" ").join("==");
 
 packageTitle.style.display = "flex";
 packageTitle.style.alignItems = "center";
