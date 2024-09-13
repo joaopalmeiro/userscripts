@@ -27,6 +27,7 @@
 - https://github.com/hotwired/turbo
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
 - https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
+- https://github.com/d3ward/scriptz
 
 ## Snippets
 
