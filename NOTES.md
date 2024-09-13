@@ -17,3 +17,4 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
 - https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout
 - https://www.tampermonkey.net/documentation.php?locale=en#meta:author
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
