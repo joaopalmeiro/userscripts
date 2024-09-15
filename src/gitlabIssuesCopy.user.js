@@ -8,11 +8,41 @@
 // @run-at      document-end
 // ==/UserScript==
 
-function callback(mutations, observer) {
-  const issues = document.querySelector(".issues-list");
+function prepareIssueNumberToClose(href) {
+  const issueNumber = Number.parseInt(href.substring(href.lastIndexOf("/") + 1));
+  return `Closes #${issueNumber}`;
+}
 
-  if (issues) {
-    console.log(issues.querySelectorAll(".issue-title-text"));
+function callback(mutations, observer) {
+  const issueList = document.querySelector(".issues-list");
+
+  if (issueList) {
+    const issues = issueList.querySelectorAll(".issue-title-text");
+
+    for (const issue of issues) {
+      const copyButton = document.createElement("button");
+      copyButton.textContent = "Copy";
+      copyButton.style.all = "revert";
+      copyButton.style.cursor = "pointer";
+      copyButton.style.marginLeft = "1rem";
+
+      const issueNumberToClose = prepareIssueNumberToClose(issue.href);
+
+      copyButton.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(issueNumberToClose);
+          copyButton.textContent = "Copied!";
+
+          setTimeout(() => {
+            copyButton.textContent = "Copy";
+          }, 2000);
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      issue.insertAdjacentElement("afterend", copyButton);
+    }
 
     observer.disconnect();
   }
