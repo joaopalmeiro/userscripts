@@ -8,4 +8,15 @@
 // @run-at      document-end
 // ==/UserScript==
 
-console.log(document.querySelector(".issues-list"));
+function callback(mutations, observer) {
+  const issues = document.querySelector(".issues-list");
+
+  if (issues) {
+    console.log(issues.querySelectorAll(".issue-title-text"));
+
+    observer.disconnect();
+  }
+}
+
+const observer = new MutationObserver(callback);
+observer.observe(document.body, { childList: true, subtree: true });

@@ -30,6 +30,7 @@
 - https://github.com/d3ward/scriptz
 - https://flaviocopes.com/how-to-get-last-item-path-javascript/
 - https://github.com/violentmonkey/vm-dom
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 
 ## Snippets
 
@@ -77,6 +78,8 @@ if (node.parentElement) {
   - "It is a common case to operate on elements that are created dynamically, which may not be ready even on `document-end`."
   - "A better way to do stuff when certain element is ready is to use `MutationObserver`"
   - "To observe `document.body` we must make sure `document.body` exists. This should not be a problem if `@run-at` is omitted or set to a value other than `document-start`."
+- https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver#observing_child_elements
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/children
 
 ````js
 /**
@@ -119,3 +122,29 @@ export function observe(
   return disconnect;
 }
 ````
+
+```js
+function logChanges(records, observer) {
+  for (const record of records) {
+    for (const addedNode of record.addedNodes) {
+      log.textContent = `Added: ${addedNode.textContent}\n${log.textContent}`;
+    }
+    for (const removedNode of record.removedNodes) {
+      log.textContent = `Removed: ${removedNode.textContent}\n${log.textContent}`;
+    }
+    if (record.target.childNodes.length === 0) {
+      log.textContent = `Disconnected\n${log.textContent}`;
+      observer.disconnect();
+    }
+    console.log(record.target.childNodes.length);
+  }
+}
+
+const observerOptions = {
+  childList: true,
+  subtree: true,
+};
+
+const observer = new MutationObserver(logChanges);
+observer.observe(container, observerOptions);
+```
