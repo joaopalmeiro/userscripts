@@ -28,6 +28,7 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
 - https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
 - https://github.com/d3ward/scriptz
+- https://flaviocopes.com/how-to-get-last-item-path-javascript/
 
 ## Snippets
 
@@ -52,5 +53,13 @@ function onUrlChange() {
   }
   console.log("processing", location.href);
   // activate();
+}
+```
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement#using_parentelement
+
+```js
+if (node.parentElement) {
+  node.parentElement.style.color = "red";
 }
 ```
