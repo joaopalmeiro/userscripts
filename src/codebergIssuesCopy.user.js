@@ -18,8 +18,8 @@ const issues = document.querySelectorAll(".issue-title");
 for (const issue of issues) {
   const copyButton = document.createElement("button");
   copyButton.textContent = "Copy";
-  copyButton.style.cursor = "pointer";
   copyButton.style.all = "revert";
+  copyButton.style.cursor = "pointer";
   issue.parentElement.style.gap = "1rem";
 
   const issueNumberToClose = prepareIssueNumberToClose(issue.href);

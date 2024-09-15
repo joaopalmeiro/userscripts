@@ -29,6 +29,7 @@
 - https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
 - https://github.com/d3ward/scriptz
 - https://flaviocopes.com/how-to-get-last-item-path-javascript/
+- https://github.com/violentmonkey/vm-dom
 
 ## Snippets
 
@@ -63,3 +64,58 @@ if (node.parentElement) {
   node.parentElement.style.color = "red";
 }
 ```
+
+### GitLab
+
+```xml
+<svg data-testid="issue-type-issue-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current gl-text-secondary" title="Issue"></svg>
+```
+
+- https://github.com/violentmonkey/vm-dom/blob/v2.1.7/src/index.ts#L50-L88
+- https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+- https://violentmonkey.github.io/guide/observing-dom/:
+  - "It is a common case to operate on elements that are created dynamically, which may not be ready even on `document-end`."
+  - "A better way to do stuff when certain element is ready is to use `MutationObserver`"
+  - "To observe `document.body` we must make sure `document.body` exists. This should not be a problem if `@run-at` is omitted or set to a value other than `document-start`."
+
+````js
+/**
+ * Observe an existing `node` until `callback` returns `true`.
+ * The returned function can be called explicitly to disconnect the observer.
+ *
+ * ```js
+ * VM.observe(document.body, () => {
+ *   const node = document.querySelector('.profile');
+ *   if (node) {
+ *     console.log('It\'s there!');
+ *     return true;
+ *   }
+ * });
+ * ```
+ */
+export function observe(
+  node: Node,
+  callback: (
+    mutations: MutationRecord[],
+    observer: MutationObserver
+  ) => boolean | void,
+  options?: MutationObserverInit
+): () => void {
+  const observer = new MutationObserver((mutations, ob) => {
+    const result = callback(mutations, ob);
+    if (result) disconnect();
+  });
+  observer.observe(
+    node,
+    Object.assign(
+      {
+        childList: true,
+        subtree: true,
+      },
+      options
+    )
+  );
+  const disconnect = () => observer.disconnect();
+  return disconnect;
+}
+````
