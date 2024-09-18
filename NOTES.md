@@ -36,6 +36,11 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API:
   - https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigate_event
   - https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigatesuccess_event
+  - https://caniuse.com/mdn-api_navigation_navigatesuccess_event
+  - https://developer.chrome.com/docs/web-platform/navigation-api#success_and_failure_events
+- https://www.matuzo.at/blog/2022/100daysof-day50
+- https://developer.mozilla.org/en-US/docs/Web/CSS/:has
+- "`:not(:has(+ button))` inverts this, selecting elements that do not have a button as their next sibling"
 
 ## Snippets
 

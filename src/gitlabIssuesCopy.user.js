@@ -13,7 +13,7 @@ function prepareIssueNumberToClose(href) {
   return `Closes #${issueNumber}`;
 }
 
-function callback(mutations, observer) {
+function callback(_mutations, observer) {
   const issueList = document.querySelector(".issues-list");
 
   if (issueList) {

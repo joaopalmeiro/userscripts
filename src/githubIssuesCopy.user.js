@@ -2,8 +2,8 @@
 // @name        githubIssuesCopy
 // @description Copy the GitHub issue number to close to the clipboard.
 // @namespace   Violentmonkey Scripts
-// @match       https://github.com/joaopalmeiro/*/issues
-// @version     0.1.0
+// @match       https://github.com/*
+// @version     0.2.0
 // @author      João Palmeiro
 // @run-at      document-end
 // ==/UserScript==
@@ -13,29 +13,37 @@ function prepareIssueNumberToClose(id) {
   return `Closes #${issueNumber}`;
 }
 
-const issues = document.querySelectorAll('[id^="issue_"][id$="_link"]');
+function onUrlChange() {
+  if (!(location.pathname.startsWith("/joaopalmeiro") && location.pathname.endsWith("/issues"))) {
+    return;
+  }
 
-for (const issue of issues) {
-  const copyButton = document.createElement("button");
-  copyButton.textContent = "Copy";
-  copyButton.style.all = "revert";
-  copyButton.style.cursor = "pointer";
-  copyButton.style.marginLeft = "1rem";
+  const issues = document.querySelectorAll('[id^="issue_"][id$="_link"]:not(:has(+ button))');
 
-  const issueNumberToClose = prepareIssueNumberToClose(issue.id);
+  for (const issue of issues) {
+    const copyButton = document.createElement("button");
+    copyButton.textContent = "Copy";
+    copyButton.style.all = "revert";
+    copyButton.style.cursor = "pointer";
+    copyButton.style.marginLeft = "1rem";
 
-  copyButton.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(issueNumberToClose);
-      copyButton.textContent = "Copied!";
+    const issueNumberToClose = prepareIssueNumberToClose(issue.id);
 
-      setTimeout(() => {
-        copyButton.textContent = "Copy";
-      }, 2000);
-    } catch (error) {
-      console.error(error);
-    }
-  });
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(issueNumberToClose);
+        copyButton.textContent = "Copied!";
 
-  issue.insertAdjacentElement("afterend", copyButton);
+        setTimeout(() => {
+          copyButton.textContent = "Copy";
+        }, 2000);
+      } catch (error) {
+        console.error(error);
+      }
+    });
+
+    issue.insertAdjacentElement("afterend", copyButton);
+  }
 }
+
+navigation.addEventListener("navigatesuccess", onUrlChange);
