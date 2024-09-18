@@ -31,6 +31,11 @@
 - https://flaviocopes.com/how-to-get-last-item-path-javascript/
 - https://github.com/violentmonkey/vm-dom
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+- https://stackoverflow.com/questions/53303519/detect-an-url-change-in-a-spa/67825703#67825703
+- https://stackoverflow.com/a/52809105
+- https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API:
+  - https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigate_event
+  - https://developer.mozilla.org/en-US/docs/Web/API/Navigation/navigatesuccess_event
 
 ## Snippets
 
@@ -56,6 +61,36 @@ function onUrlChange() {
   console.log("processing", location.href);
   // activate();
 }
+```
+
+```js
+(function () {
+  "use strict";
+
+  // Function to run on specific pages
+  function runOnSpecificPages() {
+    if (window.location.pathname.startsWith("/user/")) {
+      // Code for user profile pages
+      console.log("This is a user profile page");
+    } else if (window.location.pathname.startsWith("/repo/")) {
+      // Code for repository pages
+      console.log("This is a repository page");
+    }
+  }
+
+  // Run the function initially
+  runOnSpecificPages();
+
+  // Set up a MutationObserver to detect URL changes
+  let lastUrl = location.href;
+  new MutationObserver(() => {
+    const url = location.href;
+    if (url !== lastUrl) {
+      lastUrl = url;
+      runOnSpecificPages();
+    }
+  }).observe(document, { subtree: true, childList: true });
+})();
 ```
 
 - https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement#using_parentelement
