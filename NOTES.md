@@ -41,6 +41,9 @@
 - https://www.matuzo.at/blog/2022/100daysof-day50
 - https://developer.mozilla.org/en-US/docs/Web/CSS/:has
 - "`:not(:has(+ button))` inverts this, selecting elements that do not have a button as their next sibling"
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test:
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test#using_test: `/^hello/.test(str);`
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
 
 ## Snippets
 
