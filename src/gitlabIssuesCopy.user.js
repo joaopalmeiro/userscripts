@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        gitlabIssuesCopy
-// @description Copy the GitLab issue number to close to the clipboard.
+// @description Copy the issue number to close from the Issues page of a GitLab repo.
 // @namespace   Violentmonkey Scripts
 // @match       https://gitlab.com/joaommpalmeiro/*/-/issues
-// @version     0.1.0
+// @version     0.1.1
 // @author      João Palmeiro
 // @run-at      document-end
 // ==/UserScript==

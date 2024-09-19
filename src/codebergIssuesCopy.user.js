@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        codebergIssuesCopy
-// @description Copy the Codeberg issue number to close to the clipboard.
+// @description Copy the issue number to close from the Issues page of a Codeberg repo.
 // @namespace   Violentmonkey Scripts
 // @match       https://codeberg.org/joaopalmeiro/*/issues
-// @version     0.1.0
+// @version     0.1.1
 // @author      João Palmeiro
 // @run-at      document-end
 // ==/UserScript==

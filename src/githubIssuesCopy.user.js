@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        githubIssuesCopy
-// @description Copy the GitHub issue number to close to the clipboard.
+// @description Copy the issue number to close from the Issues page of a GitHub repo.
 // @namespace   Violentmonkey Scripts
 // @match       https://github.com/*
-// @version     0.2.0
+// @version     0.2.1
 // @author      João Palmeiro
 // @run-at      document-end
 // ==/UserScript==
