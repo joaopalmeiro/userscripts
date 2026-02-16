@@ -64,7 +64,7 @@ if (self.navigation) {
 } else {
   let u = location.href;
   new MutationObserver(
-    () => u !== (u = location.href) && onUrlChange()
+    () => u !== (u = location.href) && onUrlChange(),
   ).observe(document, { subtree: true, childList: true });
 }
 
@@ -114,6 +114,55 @@ function onUrlChange() {
 if (node.parentElement) {
   node.parentElement.style.color = "red";
 }
+```
+
+- https://developer.apple.com/documentation/iobluetooth
+  - https://developer.apple.com/documentation/iobluetooth/iobluetoothdevice/paireddevices(): `class func pairedDevices() -> [Any]!`
+  - https://developer.apple.com/documentation/iobluetooth/iobluetoothdevice/isconnected()
+- https://community.folivora.ai/t/battery-level-of-bluetooth-headphones/42832/5
+- https://github.com/pybluez/pybluez
+- https://www.swift.org/getting-started/
+  - https://www.hackingwithswift.com/swift/5.7/if-let-shorthand
+  - https://mimo.org/glossary/swift/if-let-statement: `if let value = score, value > 80 {`
+  - https://developer.apple.com/documentation/swift/dictionary/first(where:): `if let firstNegative = numbers.first(where: { $0 < 0 }) {`
+
+```bash
+swift -e '
+import IOBluetooth
+
+if let devices = IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice] {
+    for device in devices {
+        if device.name?.contains("ULT") == true {
+            for key in ["batteryPercentSingle", "batteryPercentCombined", "batteryPercentLeft", "batteryPercentRight", "batteryPercentCase", "headsetBattery"] {
+                if let val = device.value(forKey: key) {
+                    print("\(key): \(val)")
+                }
+            }
+        }
+    }
+}
+'
+```
+
+```plain
+batteryPercentSingle: 50
+batteryPercentCombined: 0
+batteryPercentLeft: 0
+batteryPercentRight: 0
+batteryPercentCase: 0
+headsetBattery: 0
+```
+
+```bash
+swift -e 'import IOBluetooth; (IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice])?.forEach { if $0.name?.contains("ULT") == true { print($0.value(forKey: "batteryPercentSingle") ?? "") } }'
+```
+
+```bash
+swift -e 'import IOBluetooth; if let d = (IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice])?.first(where: { $0.name == "ULT WEAR" && $0.isConnected() }), let v = d.value(forKey: "batteryPercentSingle") as? Int, v > 0 { print(v) }'
+```
+
+```bash
+swift -e 'import IOBluetooth; if let v = (IOBluetoothDevice.pairedDevices() as? [IOBluetoothDevice])?.first(where: { $0.name == "ULT WEAR" && $0.isConnected() })?.value(forKey: "batteryPercentSingle") as? Int, v > 0 { print(v) }'
 ```
 
 ### GitLab
