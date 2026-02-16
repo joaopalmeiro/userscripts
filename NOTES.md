@@ -9,6 +9,7 @@
   - https://violentmonkey.github.io/api/matching/
   - https://violentmonkey.github.io/posts/features-in-userscript-generator/
   - [[Feature] Manifest V3 for Chrome](https://github.com/violentmonkey/violentmonkey/issues/1934) issue
+  - https://violentmonkey.github.io/api/metadata-block/#namespace
 - https://github.com/chocolateboy/userscripts:
   - https://github.com/chocolateboy/userscripts/blob/b0d3ec392b14cef34c5c9687a4753eaa4cd0213a/src/more-tomatoes.user.ts
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
@@ -17,7 +18,12 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText:
   - https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText#exceptions
 - https://developer.mozilla.org/en-US/docs/Web/API/clearTimeout
-- https://www.tampermonkey.net/documentation.php?locale=en#meta:author
+- Tampermonkey:
+  - https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+  - https://www.tampermonkey.net/index.php?browser=chrome
+  - https://www.tampermonkey.net/faq.php#Q209
+  - https://www.tampermonkey.net/documentation.php?locale=en
+  - https://www.tampermonkey.net/documentation.php?locale=en#meta:author
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
 - https://violentmonkey.github.io/api/matching/#matching-spa-sites-like-fb-github-twitter-youtube:
   - https://github.com/violentmonkey/vm-url
@@ -44,6 +50,7 @@
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test:
   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test#using_test: `/^hello/.test(str);`
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
+- https://github.com/bluwy/npm-userscript
 
 ## Snippets
 
