@@ -24,6 +24,7 @@
   - https://www.tampermonkey.net/faq.php#Q209
   - https://www.tampermonkey.net/documentation.php?locale=en
   - https://www.tampermonkey.net/documentation.php?locale=en#meta:author
+  - https://www.tampermonkey.net/documentation.php?locale=en#meta:version
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
 - https://violentmonkey.github.io/api/matching/#matching-spa-sites-like-fb-github-twitter-youtube:
   - https://github.com/violentmonkey/vm-url
@@ -51,6 +52,7 @@
   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test#using_test: `/^hello/.test(str);`
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
 - https://github.com/bluwy/npm-userscript
+  - https://greasyfork.org/en/scripts/559139-npm-userscript/code
 
 ## Snippets
 

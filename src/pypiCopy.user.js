@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name        pypiCopy
+// @version     2026-02-17
 // @description Copy the package name and version as a requirement to the clipboard.
-// @namespace   Violentmonkey Scripts
-// @match       https://pypi.org/project/*
-// @version     0.1.0
 // @author      João Palmeiro
+// @homepageURL https://github.com/joaopalmeiro/userscripts
+// @match       https://pypi.org/project/*
 // @run-at      document-end
+// @supportURL  https://github.com/joaopalmeiro/userscripts/issues
 // ==/UserScript==
 
 const packageTitle = document.querySelector("h1");

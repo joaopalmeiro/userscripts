@@ -1,3 +1,6 @@
 {
-  "recommendations": ["andywang.vscode-scriptmonkey"]
+  "recommendations": [
+    "andywang.vscode-scriptmonkey",
+    "jsynowiec.vscode-insertdatestring"
+  ]
 }
