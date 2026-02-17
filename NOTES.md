@@ -58,6 +58,7 @@
   - https://github.com/biomejs/biome/issues/3718
   - https://github.com/biomejs/biome/discussions/941
     - https://github.com/biomejs/biome/pull/8659
+- https://fontawesome.com/search
 
 ## Snippets
 
