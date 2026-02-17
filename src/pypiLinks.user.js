@@ -12,7 +12,19 @@
 const packageTitle = document.querySelector("h1");
 const packageName = packageTitle.textContent.trim().split(" ")[0];
 
-const projectLinks = document.querySelector("div.sidebar-section.unverified > ul.vertical-tabs__list");
+const section = document.querySelector("div.sidebar-section.unverified");
+let projectLinks = section.querySelector("ul.vertical-tabs__list");
+
+if (!projectLinks) {
+  const heading = document.createElement("h6");
+  heading.textContent = "Project links";
+
+  projectLinks = document.createElement("ul");
+  projectLinks.className = "vertical-tabs__list";
+
+  section.appendChild(heading);
+  section.appendChild(projectLinks);
+}
 
 const links = [
   {

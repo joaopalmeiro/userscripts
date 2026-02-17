@@ -59,6 +59,8 @@
   - https://github.com/biomejs/biome/discussions/941
     - https://github.com/biomejs/biome/pull/8659
 - https://fontawesome.com/search
+- https://pypi.org/project/scikit-blocks/
+- https://pypi.org/project/scikit-learn/
 
 ## Snippets
 
