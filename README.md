@@ -1,5 +1,7 @@
 # userscripts
 
+[![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
+
 A collection of userscripts to facilitate certain tasks on different websites.
 
 ## Available userscripts

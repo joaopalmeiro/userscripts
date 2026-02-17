@@ -53,6 +53,11 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/prepend
 - https://github.com/bluwy/npm-userscript
   - https://greasyfork.org/en/scripts/559139-npm-userscript/code
+- Biome:
+  - https://biomejs.dev/reference/configuration/#formatteruseeditorconfig
+  - https://github.com/biomejs/biome/issues/3718
+  - https://github.com/biomejs/biome/discussions/941
+    - https://github.com/biomejs/biome/pull/8659
 
 ## Snippets
 
