@@ -6,6 +6,7 @@ A collection of userscripts to facilitate certain tasks on different websites.
 
 ## Available userscripts
 
+- [psnprofilesSearch](src/psnprofilesSearch.user.js): Search for a game on PlayStation Store.
 - [pypiCopy](src/pypiCopy.user.js): Copy the package name and version as a requirement to the clipboard.
 - [pypiLinks](src/pypiLinks.user.js): Supplement packages with extra links for more information.
 
