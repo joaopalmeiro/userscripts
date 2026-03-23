@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        pypiLinks
-// @version     2026-02-17
+// @version     2026-03-23
 // @description Supplement packages with extra links for more information.
 // @author      João Palmeiro
 // @homepageURL https://github.com/joaopalmeiro/userscripts
@@ -28,14 +28,29 @@ if (!projectLinks) {
 
 const links = [
   {
-    label: "Snyk",
-    icon: "fas fa-shield-dog",
-    url: `https://security.snyk.io/package/pip/${packageName}`,
+    label: "PePy",
+    icon: "fas fa-chart-line",
+    url: `https://pepy.tech/projects/${packageName}`,
   },
   {
     label: "PyPack Trends",
     icon: "fas fa-chart-line",
     url: `https://pypacktrends.com/?packages=${packageName}&time_range=allTime`,
+  },
+  {
+    label: "PyPI Stats",
+    icon: "fas fa-chart-line",
+    url: `https://pypistats.org/packages/${packageName}`,
+  },
+  {
+    label: "Snyk",
+    icon: "fas fa-shield-dog",
+    url: `https://security.snyk.io/package/pip/${packageName}`,
+  },
+  {
+    label: "Socket",
+    icon: "fas fa-shield",
+    url: `https://socket.dev/pypi/package/${packageName}`,
   },
 ];
 

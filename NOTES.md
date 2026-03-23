@@ -69,6 +69,10 @@
   - https://psnprofiles.com/guides/15720-grand-theft-auto-v
   - https://psnprofiles.com/trophies/15720-grand-theft-auto-v
   - https://psnprofiles.com/guides
+- https://github.com/psincraian/pepy
+  - https://pepy.tech/
+  - PePy
+- https://socket.dev/pypi/package/gaveta
 
 ## Snippets
 
