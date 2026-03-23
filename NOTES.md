@@ -25,6 +25,7 @@
   - https://www.tampermonkey.net/documentation.php?locale=en
   - https://www.tampermonkey.net/documentation.php?locale=en#meta:author
   - https://www.tampermonkey.net/documentation.php?locale=en#meta:version
+  - https://www.tampermonkey.net/documentation.php?locale=en#meta:match
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
 - https://violentmonkey.github.io/api/matching/#matching-spa-sites-like-fb-github-twitter-youtube:
   - https://github.com/violentmonkey/vm-url
@@ -61,6 +62,13 @@
 - https://fontawesome.com/search
 - https://pypi.org/project/scikit-blocks/
 - https://pypi.org/project/scikit-learn/
+- https://stackoverflow.com/questions/60626865/tampermonkey-script-run-accross-multiple-pages
+- PSNProfiles:
+  - https://psnprofiles.com/guide/14061-grand-theft-auto-v-trophy-guide
+  - https://psnprofiles.com/guide/17056-grand-theft-auto-v-original-heist-walkthrough
+  - https://psnprofiles.com/guides/15720-grand-theft-auto-v
+  - https://psnprofiles.com/trophies/15720-grand-theft-auto-v
+  - https://psnprofiles.com/guides
 
 ## Snippets
 
