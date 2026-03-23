@@ -55,14 +55,14 @@ const links = [
 ];
 
 for (const { label, icon, url } of links) {
-  const snykEntry = document.createElement("li");
-  const snykLink = document.createElement("a");
+  const extraEntry = document.createElement("li");
+  const extraLink = document.createElement("a");
 
-  snykLink.href = url;
-  snykLink.target = "_blank";
-  snykLink.className = "vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed";
-  snykLink.innerHTML = `<i class="${icon}" aria-hidden="true"></i>${label}`;
+  extraLink.href = url;
+  extraLink.target = "_blank";
+  extraLink.className = "vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed";
+  extraLink.innerHTML = `<i class="${icon}" aria-hidden="true"></i>${label}`;
 
-  snykEntry.appendChild(snykLink);
-  projectLinks.appendChild(snykEntry);
+  extraEntry.appendChild(extraLink);
+  projectLinks.appendChild(extraEntry);
 }
