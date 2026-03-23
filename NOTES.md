@@ -73,6 +73,8 @@
   - https://pepy.tech/
   - PePy
 - https://socket.dev/pypi/package/gaveta
+- https://arxiv.org/abs/2510.06071
+- https://info.arxiv.org/help/prep.html#comments: "Anonymous FTP and World Wide Web locations should be given in the standard Uniform Resource Locator (URL) format. We automatically convert these into an active link reading "this ftp URL" and an http URL into a link reading "this http URL" (try for a grammatically sensible substitution)."
 
 ## Snippets
 
