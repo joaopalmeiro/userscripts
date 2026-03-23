@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        psnprofilesSearch
-// @version     2026-02-24
+// @version     2026-03-23
 // @description Search for a game on PlayStation Store.
 // @author      João Palmeiro
 // @homepageURL https://github.com/joaopalmeiro/userscripts
